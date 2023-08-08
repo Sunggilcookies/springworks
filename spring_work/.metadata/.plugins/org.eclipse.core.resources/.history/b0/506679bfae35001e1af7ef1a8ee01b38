@@ -1,0 +1,35 @@
+package talgut;
+
+public class handdle {
+	String name;
+	int handdles;
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public int getHanddles() {
+		return handdles;
+	}
+
+
+
+	public void setHanddles(int handdles) {
+		this.handdles = handdles;
+	}
+
+
+
+	
+	
+}

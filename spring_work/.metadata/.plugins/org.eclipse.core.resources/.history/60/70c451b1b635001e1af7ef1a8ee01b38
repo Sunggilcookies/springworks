@@ -1,0 +1,43 @@
+package talgut;
+import talgut.*;
+
+public class cycle {
+	String cycle;
+	bag bag;
+	wheel wheel;
+	handdle handdle;
+	public String getCycle() {
+		return cycle;
+	}
+	public void setCycle(String cycle) {
+		this.cycle = cycle;
+	}
+	public bag getBag() {
+		return bag;
+	}
+	public void setBag(bag bag) {
+		System.out.println(bag);
+		this.bag = bag;
+	}
+	public wheel getWheel() {
+		return wheel;
+	}
+	public void setWheel(wheel wheel) {
+		System.out.println(wheel);
+		this.wheel = wheel;
+	}
+	public handdle getHanddel() {
+		return handdle;
+	}
+	public void setHanddel(handdle handdel) {
+		System.out.println(handdle);
+		this.handdle = handdle;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return cycle+"-"+wheel+","+handdle+","+bag;
+				
+		
+}
+}

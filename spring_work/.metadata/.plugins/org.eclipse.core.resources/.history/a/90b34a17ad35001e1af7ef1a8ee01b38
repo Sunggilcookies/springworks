@@ -1,0 +1,9 @@
+package talgut;
+
+public class cycle {
+	
+		String cycle3;
+		String cyclepokari;
+		String mtb;
+	
+}

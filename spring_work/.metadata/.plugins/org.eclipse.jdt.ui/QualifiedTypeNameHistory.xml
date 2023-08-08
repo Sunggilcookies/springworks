@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="di_p.HandPhone"/>
+    <fullyQualifiedTypeName name="talgut.wheel"/>
+    <fullyQualifiedTypeName name="talgut.bag"/>
+    <fullyQualifiedTypeName name="talgut.handdle"/>
+    <fullyQualifiedTypeName name="talgut.cycle"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+    <fullyQualifiedTypeName name="di_p.Camera"/>
+</qualifiedTypeNameHistroy>

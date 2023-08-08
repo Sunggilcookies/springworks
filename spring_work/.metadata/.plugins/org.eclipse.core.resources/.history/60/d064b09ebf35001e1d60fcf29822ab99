@@ -1,0 +1,31 @@
+package talgut;
+
+public class bag {
+	String bag;
+	
+	
+
+	public String getWheel() {
+		return bag;
+	}
+
+
+
+	public void setWheel(String bag) {
+	
+		this.bag = bag;
+	}
+
+
+
+	@Override
+	public String toString() {
+		
+		return bag;
+	}
+
+
+
+	
+	
+}

@@ -1,0 +1,43 @@
+package talgut;
+
+public class wheel {
+	String name;
+	int wheels;
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public int getHanddles() {
+		return wheels;
+	}
+
+
+
+	public void setHanddles(int handdles) {
+		this.wheels = handdles;
+	}
+
+
+
+	@Override
+	public String toString() {
+		
+		return name+wheels+"개";
+	}
+
+
+
+	
+	
+}

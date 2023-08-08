@@ -1,0 +1,36 @@
+
+package talgut;
+
+import talgut.handdle;
+import talgut.bag;
+import talgut.wheel;
+
+public class cyclepokari {
+	wheel wheel;
+	handdle handle;
+	bag bag;
+	public wheel getWheel() {
+		return wheel;
+	}
+	public void setWheel(wheel wheel) {
+		this.wheel = wheel;
+	}
+	public handdle getHandle() {
+		return handle;
+	}
+	public void setHandle(handdle handle) {
+		this.handle = handle;
+	}
+	public bag getBag() {
+		return bag;
+	}
+	public void setBag(bag bag) {
+		this.bag = bag;
+	}
+	@Override
+	public String toString() {
+		return "cyclepokari [wheel=" + wheel + ", handle=" + handle + ", bag=" + bag + "]";
+	}
+	
+	
+}

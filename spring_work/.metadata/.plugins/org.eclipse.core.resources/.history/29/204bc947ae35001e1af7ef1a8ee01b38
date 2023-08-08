@@ -1,0 +1,17 @@
+package talgut;
+import talgut.*;
+public class main {
+
+	public static void main(String[] args) {
+		//인스턴스 생성
+		cycle cycle = new cycle();
+		
+		
+		cycle.setMtb(1);
+		
+		
+		
+		
+	}
+
+}

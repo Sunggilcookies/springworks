@@ -1,0 +1,77 @@
+package talgut;
+
+public class cycle {
+	
+		String cycle3;
+		String cyclepokari;
+		String mtb;
+		bag bag;
+		wheel wheel;
+		handdle handdle;
+		
+		
+		public String getCycle3() {
+			return cycle3;
+		}
+
+
+		public void setCycle3(String cycle3) {
+			this.cycle3 = cycle3;
+		}
+
+
+		public String getCyclepokari() {
+			return cyclepokari;
+		}
+
+
+		public void setCyclepokari(String cyclepokari) {
+			this.cyclepokari = cyclepokari;
+		}
+
+
+		public String getMtb() {
+			return mtb;
+		}
+
+
+		public void setMtb(String mtb) {
+			this.mtb = mtb;
+		}
+
+
+		public bag getBag() {
+			return bag;
+		}
+
+
+		public void setBag(bag bag) {
+			this.bag = bag;
+		}
+
+
+		public wheel getWheel() {
+			return wheel;
+		}
+
+
+		public void setWheel(wheel wheel) {
+			this.wheel = wheel;
+		}
+
+
+		public handdle getHanddle() {
+			return handdle;
+		}
+
+
+		public void setHanddle(handdle handdle) {
+			this.handdle = handdle;
+		}
+
+
+		@Override
+		public String toString() {
+			return "cycle [bag=" + bag + ", wheel=" + wheel + ", handdle=" + handdle + "]";
+		}
+}

@@ -1,0 +1,21 @@
+package talgut;
+import talgut.*;
+public class main {
+
+	public static void main(String[] args) {
+		//인스턴스 새엇ㅇ
+		cycle cycle = new cycle();
+		cycle3 cycle3 = new cycle3();
+		cyclepokari pokari = new cyclepokari();
+		mtb mtb1 = new mtb();
+		bag bag = new bag();
+		wheel wheel = new wheel();
+		handdle handdle = new handdle();
+		
+		
+		
+		
+		
+	}
+
+}

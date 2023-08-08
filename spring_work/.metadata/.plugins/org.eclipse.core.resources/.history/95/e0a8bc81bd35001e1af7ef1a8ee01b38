@@ -1,0 +1,21 @@
+package talgut;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("------------------------");
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("di_xml/first2.xml");
+
+		System.out.println("------------------------");
+		cycle a = (cycle)context.getBean("c1");
+		System.out.println(c1);
+		
+	}
+
+}

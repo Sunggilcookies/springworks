@@ -1,0 +1,13 @@
+
+package talgut;
+
+import talgut.handdle;
+import talgut.bag;
+import talgut.wheel;
+
+public class cyclepokari {
+	wheel wheel;
+	hanndle handle;
+	bag bag;
+	
+}

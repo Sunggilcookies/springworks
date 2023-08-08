@@ -1,0 +1,19 @@
+package talgut;
+
+public class wheel {
+
+	int i = 0;
+
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+
+	@Override
+	public String toString() {
+		return "[바구니의 개수는 " + i + "개]";
+	}
+}

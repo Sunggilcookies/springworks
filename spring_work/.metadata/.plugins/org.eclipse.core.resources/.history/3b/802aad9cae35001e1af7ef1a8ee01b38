@@ -1,0 +1,8 @@
+package talgut;
+
+public class handdle {
+	String name;
+	int handdles;
+
+	
+}

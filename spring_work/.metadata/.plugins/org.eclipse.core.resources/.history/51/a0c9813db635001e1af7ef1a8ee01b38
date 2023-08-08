@@ -1,0 +1,18 @@
+package talgut;
+
+public class wheel {
+	String wheel;
+	
+	
+
+	@Override
+	public String toString() {
+		
+		return wheel;
+	}
+
+
+
+	
+	
+}

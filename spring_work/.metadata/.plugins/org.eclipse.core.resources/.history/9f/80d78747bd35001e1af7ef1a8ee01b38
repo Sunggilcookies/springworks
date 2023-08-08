@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean class="talgut.cycle" name="c1">
+		<property name="name">
+			<value>세발자전거</value>
+		</property>
+	
+		<property name="wheel">
+        <ref bean="w1"></ref>
+		</property>
+		<property name="handdel">
+        <ref bean="h1"></ref>
+		</property>
+		
+	</bean>
+	
+	<bean class="talgut.c1" name="w1">
+		<property name="wheel" value="바퀴"/>
+	</bean>
+	<bean class="talgut.c1" name="h1">
+		<property name="handdle" value="핸들"/>
+	</bean>
+	
+	
+	
+	
+		
+	
+
+</beans>
+

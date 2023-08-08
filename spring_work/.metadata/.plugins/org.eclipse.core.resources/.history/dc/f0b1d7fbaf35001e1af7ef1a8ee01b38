@@ -1,0 +1,12 @@
+package talgut;
+
+
+public class cycle {
+	String cycle;
+	bag bag;
+	wheel wheel;
+	handdle handdel;
+	
+	
+	
+}

@@ -1,0 +1,29 @@
+package talgut;
+import talgut.*;
+public class main {
+
+	public static void main(String[] args) {
+
+		mtb mtb1 = new mtb();
+		cycle3 cycle1 = new cycle3();
+		cyclepokari pokari = new cyclepokari();
+		mtb1.setBag("null");
+		mtb1.setWheel("two");
+		mtb1.setHandle("one");
+		
+		cycle3 cycle3 = new cycle3();
+		cycle3 cycle3 = new cycle3();
+		cyclepokari pokari = new cyclepokari();
+		cycle3.setBag("null");
+		cycle3.setWheel("three");
+		cycle3.setHandle("one");
+		
+		cyclepokari cyclepokari = new cyclepokari();
+		cycle3 cycle1 = new cycle3();
+		cyclepokari pokari = new cyclepokari();
+		mtb1.setBag("n");
+		mtb1.setWheel("");
+		mtb1.setHandle("one");
+	}
+
+}

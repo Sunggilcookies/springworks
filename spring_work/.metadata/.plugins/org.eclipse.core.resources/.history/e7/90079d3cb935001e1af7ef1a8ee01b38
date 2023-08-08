@@ -1,0 +1,29 @@
+package talgut;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+import talgut.*;
+public class main {
+
+	public static void main(String[] args) {
+		//인스턴스 생성
+		cycle cycle3 = new cycle();
+		cycle pokari = new cycle();
+		cycle mtb = new cycle();
+		
+		cycle3.setCycle("세발자전거");
+		pokari.setCycle("포카리자전거");
+		mtb.setCycle("MTB");
+		
+		System.out.println("------------------------");
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("di_xml/first2.xml");
+
+		System.out.println("------------------------");
+		cycle c1 = (HandPhone)context.getBean("hp2");
+		System.out.println(c1);
+		
+	}
+
+}

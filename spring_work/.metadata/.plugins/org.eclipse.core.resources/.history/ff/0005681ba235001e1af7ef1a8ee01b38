@@ -1,0 +1,8 @@
+package talgut;
+
+public class cycle {
+	
+		cycle3 cycle3;
+		cyclepokari cyclepokari;
+		mtb mtb;
+}

@@ -1,0 +1,17 @@
+package talgut;
+import talgut.cycle;
+public class cycle3 {
+
+	int wheel;
+	cycle 
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	
+}

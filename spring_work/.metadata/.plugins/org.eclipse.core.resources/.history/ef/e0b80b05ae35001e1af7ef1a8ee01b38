@@ -1,0 +1,57 @@
+package talgut;
+
+	public static class k() {
+	 wheel wheel ;
+	 
+	 
+	 
+		public static class wheel {
+		int i=0;
+	
+		public int getI() {
+			return i;
+		}
+	
+		public void setI(int i) {
+			this.i = i;
+		}
+	
+		@Override
+		public String toString() {
+			return "[바퀴의 개수는" + i + "개]";
+		}
+	}
+
+		public class handdle {
+		int i=0;
+	
+		public int getI() {
+			return i;
+		}
+	
+		public void setI(int i) {
+			this.i = i;
+		}
+	
+		@Override
+		public String toString() {
+			return "[핸들의 개수는" + i + "개]";
+		}
+	}
+		public class bag {
+		int i=0;
+	
+		public int getI() {
+			return i;
+		}
+	
+		public void setI(int i) {
+			this.i = i;
+		}
+	
+		@Override
+		public String toString() {
+			return "[바구니의 개수는" + i + "개]";
+		}
+	}
+}
