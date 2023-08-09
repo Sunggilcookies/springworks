@@ -1,0 +1,21 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.random.RandomGenerator.JumpableGenerator;
+	//성적메소드
+public class Grade {
+	//리스트 Student 생성 type=Student클래스 
+	List<Student> studs;
+
+	public void setStuds(List<Student> studs) {
+		this.studs = studs;
+	}
+	
+	
+	
+	
+}
+
+

@@ -1,0 +1,21 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.random.RandomGenerator.JumpableGenerator;
+
+public class Grade {
+	
+	List<Student> Stud;
+	
+	@Override
+	public String toString() {
+		return a + "반 학생의 성적은 " + c + "]";
+	}	
+	
+
+
+}
+
+

@@ -1,0 +1,88 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.random.RandomGenerator.JumpableGenerator;
+
+public class Student {
+	String name;
+	int[] jum;
+	float tot, arg;
+	int rank;
+	
+	public Student(String name, int[] jum) {
+		super();
+		this.name = name;
+		this.jum = jum;
+		calc();
+	}
+	
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int[] getJum() {
+		return jum;
+	}
+
+
+	public void setJum(int[] jum) {
+		this.jum = jum;
+	}
+
+
+	public float getTot() {
+		return tot;
+	}
+
+
+	public void setTot(float tot) {
+		this.tot = tot;
+	}
+
+
+	public float getArg() {
+		return arg;
+	}
+
+
+	public void setArg(float arg) {
+		this.arg = arg;
+	}
+
+
+	public int getRank() {
+		return rank;
+	}
+
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
+
+	public void calc() {
+		tot= Arrays.stream(jum).sum();
+		arg=tot/jum.length;
+		
+	}
+
+
+	@Override
+	public String toString() {
+	return name + ", 점수:" + Arrays.toString(jum) + ", 합계:" + tot + ", 평균:" + arg +"]";
+	
+	}
+
+
+
+}
+
+

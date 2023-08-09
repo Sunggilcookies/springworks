@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    <bean class="hambuger.Hambuger" name="h1">
+        <property name="hname" value="불고기버거" />
+        <property name="calory" value="200" />
+    </bean>
+    <bean class="hambuger.Hambuger" name="h2">
+        <property name="hname" value="치킨버거" />
+        <property name="calory" value="300" />
+    </bean>
+    
+    <bean class="hambuger.Drink" name="d1">
+        <property name="hc" value="아이스" />
+        <property name="dname" value="콜라" />
+        <property name="size" value="라지" />
+    </bean>
+    <bean class="hambuger.Drink" name="d2">
+        <property name="hc" value="핫" />
+        <property name="dname" value="초코" />
+        <property name="size" value="미디움" />
+    </bean>
+
+    <bean class="hambuger.Side" name="s1">
+        <property name="sname" value="감튀" />
+        <property name="count" value="1" />
+    </bean>
+    <bean class="hambuger.Side" name="s2">
+        <property name="sname" value="너겟" />
+        <property name="count" value="4" />
+    </bean>
+
+    <bean class="hambuger.Set" name="set1">
+        <property name="name" value="set1" />
+        <property name="price" value="2000" />
+        <property name="buger1" ref="h1" />
+        <property name="drink1" ref="d1" />
+        <property name="drink2" ref="d2" />
+        <property name="side1" ref="s1" />
+    </bean>
+    
+    
+
+</beans>

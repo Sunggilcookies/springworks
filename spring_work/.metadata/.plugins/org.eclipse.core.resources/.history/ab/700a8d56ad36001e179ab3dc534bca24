@@ -1,0 +1,33 @@
+package student.main;
+
+
+import java.util.List;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import student.Grade;
+import student.Student;
+
+public class student_main {
+	
+	
+
+	public static void main(String[] args) {
+		
+	AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("di_xml/student.xml");
+
+
+     //반에서 학생뽑아 그리고 학생변수로
+		
+    	 for(Student a = context.getBean("grade",Grade.class).getStdent());
+         System.out.println(a);
+     
+		
+			
+	} 
+	
+
+
+}

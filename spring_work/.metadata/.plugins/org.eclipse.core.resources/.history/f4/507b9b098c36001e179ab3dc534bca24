@@ -1,0 +1,27 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.random.RandomGenerator.JumpableGenerator;
+
+public class Grade {
+	Student student;
+	int rank;
+	
+	public Grade(Student student, int rank) {
+		super();
+		this.student = student;
+		this.rank = rank;
+		rankCalc();
+	}
+	
+
+	@Override
+	public String toString() {
+		return "Grade [student=" + student + ", rank=" + rank + "]";
+	}
+
+
+}
+
+

@@ -1,0 +1,46 @@
+package student;
+
+import java.util.Arrays;
+import java.util.List;
+
+import student.Grade; 
+
+public class Student {
+	String name;
+	int[] jum;
+	float tot, arg;
+	int rank;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setJum(int... jum) {
+		this.jum = jum;
+		tot=0;
+		tot= Arrays.stream(jum).sum();
+		arg=tot/jum.length;
+	}
+	//랭크 메서드 -매개변수로 List 현재Sudent studs
+	public void rankCalc(List<Student> studs) {
+		rank=1;
+		//향상 for문(타입 변수 :배열명)
+		//클래스객체마다 you객체와 비교
+		for(Student you : studs) {
+			if(arg>you.arg) {
+				rank++;
+			}
+		}
+		
+	}
+	@Override
+	public String toString() {
+	return name + "\t점수:" + Arrays.toString(jum) + ", 합계:" + tot + ", 평균:" + arg + "순위"+rank+"]\n";
+	
+	}
+
+
+
+}
+
+

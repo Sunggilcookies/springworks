@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+	
+   <bean class="student.Student" name="stu1">		<property name="name" value="정현"/>
+		<property name="jum" value="85,72,33"/>
+   </bean>
+   <bean class="student.Student" name="stu2">		<property name="name" value="성길"/>
+		<property name="jum" value="12,22,33"/>
+   </bean>
+   <bean class="student.Student" name="stu3">		<property name="name" value="재훈"/>
+		<property name="jum" value="81,42,43"/>
+   </bean>
+   <bean class="student.Student" name="stu4">		<property name="name" value="주훈"/>
+		<property name="jum" value="100,100,10"/>
+   </bean>
+   <bean class="student.Student" name="stu5">		<property name="name" value="경철"/>
+		<property name="jum" value="20,52,33"/>
+   </bean>
+	
+	<bean class="student.Grade" name="grade">
+		<property name="stulist">
+			<list>
+				<ref bean="stu1"/>
+				<ref bean="stu2"/>
+				<ref bean="stu3"/>
+				<ref bean="stu4"/>
+				<ref bean="stu5"/>				
+			</list>			
+		</property>
+	</bean>
+
+ 
+ 
+ 
+  
+    
+
+</beans>

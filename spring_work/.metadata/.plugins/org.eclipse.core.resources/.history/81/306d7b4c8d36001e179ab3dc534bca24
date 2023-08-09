@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+ 
+   <bean class="studen.Grade" c="C1">
+        <property name="stu1" value="정현" />
+        <property name="stu2" value="성길" />
+        <property name="stu3" value="주훈" />
+        <property name="stu4" value="재훈" />
+        <property name="stu5" value="경철" />
+    </bean>
+
+ 
+ 
+ 
+  <bean class="student.Student" name="정현">
+        <constructor-arg value="정현" />
+        <constructor-arg>
+            <list>
+                <value>66</value>
+                <value>85</value>
+                <value>69</value>
+            </list>
+        </constructor-arg>
+    </bean>
+	<bean class="student.Student" name="성길">
+        <constructor-arg value="성길" />
+        <constructor-arg>
+            <list>
+                <value>88</value>
+                <value>89</value>
+                <value>99</value>
+            </list>
+        </constructor-arg>
+    </bean>
+	<bean class="student.Student" name="주훈">
+        <constructor-arg value="주훈" />
+        <constructor-arg>
+            <list>
+                <value>56</value>
+                <value>85</value>
+                <value>77</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean class="student.Student" name="재훈">
+        <constructor-arg value="재훈" />
+        <constructor-arg>
+            <list>
+                <value>83</value>
+                <value>80</value>
+                <value>80</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean class="student.Student" name="경철">
+        <constructor-arg value="경철" />
+        <constructor-arg>
+            <list>
+                <value>30</value>
+                <value>100</value>
+                <value>87</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+
+</beans>

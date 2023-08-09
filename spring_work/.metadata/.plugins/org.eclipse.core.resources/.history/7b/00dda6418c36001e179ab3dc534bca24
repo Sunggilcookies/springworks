@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+ 
+  <bean class="student.Student" name="stu1">
+        <constructor-arg value="정현" />
+        <constructor-arg>
+            <list>
+                <value>66</value>
+                <value>85</value>
+                <value>69</value>
+            </list>
+        </constructor-arg>
+    </bean>
+	<bean class="student.Student" name="stu2">
+        <constructor-arg value="성길" />
+        <constructor-arg>
+            <list>
+                <value>88</value>
+                <value>89</value>
+                <value>99</value>
+            </list>
+        </constructor-arg>
+    </bean>
+	<bean class="student.Student" name="stu3">
+        <constructor-arg value="주훈" />
+        <constructor-arg>
+            <list>
+                <value>56</value>
+                <value>85</value>
+                <value>77</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean class="student.Student" name="stu4">
+        <constructor-arg value="재훈" />
+        <constructor-arg>
+            <list>
+                <value>83</value>
+                <value>80</value>
+                <value>80</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean class="student.Student" name="stu5">
+        <constructor-arg value="경철" />
+        <constructor-arg>
+            <list>
+                <value>30</value>
+                <value>100</value>
+                <value>87</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+
+</beans>

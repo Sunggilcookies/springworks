@@ -1,0 +1,24 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.random.RandomGenerator.JumpableGenerator;
+
+public class Grade {
+	int a;
+	Student c;
+	public Grade(int a, Student c) {
+		super();
+		this.a = a;
+		this.C=c;
+	}
+	@Override
+	public String toString() {
+		return a + "반 학생의 성적은 " + C + "]";
+	}	
+	
+
+
+}
+
+

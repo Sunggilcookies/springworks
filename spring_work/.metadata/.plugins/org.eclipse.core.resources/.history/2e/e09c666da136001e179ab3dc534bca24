@@ -1,0 +1,30 @@
+package student;
+
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.random.RandomGenerator.JumpableGenerator;
+
+public class Grade {
+	//리스트 Stud 생성 type=Student클래스
+	List<Student> Stud;
+
+	public Grade(List<Student> studs) {
+		super();
+		Stud = stud;
+	}
+
+	@Override
+	public String toString() {
+		return "Grade [Stud=" + Stud + "]";
+	}
+	
+	
+	
+
+	
+
+
+}
+
+
