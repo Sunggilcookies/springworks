@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean class="handphone.Handphone" name="hp1" p:name="아이폰" p:battery-ref="ibat">
+		<property name="dis">
+			<bean class="handphone.Display" p:name="작은화면" p:size="1200" />
+		</property>
+	</bean>
+	<bean class="handphone.Handphone" name="hp2" autowire="byType" p:name="아이폰프로"></bean>
+	
+	<!--배터리-->
+	<bean class="handphone.Battery" name="sbat" p:name="삼성배터리" p:power="1100"></bean>
+	<bean class="handphone.Battery" name="ibat" p:name="아이폰배터리" p:power="2200"></bean>
+	<!--액정-->
+	<bean class="handphone.Display" name="bigdis" p:name="큰화면" p:size="200000"></bean>
+	<!--카메라-->
+	<bean class="handphone.Camera" name="cam1" p:name="procam" p:type="전문용"></bean>
+	<bean class="handphone.Camera" name="cam2" p:name="frecam" p:type="개인용"></bean>
+	
+</beans>
+
+

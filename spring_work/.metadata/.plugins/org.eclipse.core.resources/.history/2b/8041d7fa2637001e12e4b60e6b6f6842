@@ -1,0 +1,22 @@
+package di_p.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import foodmenu.Menu;
+
+public class Foodmenu_main {
+	
+
+		public static void main(String[] args) {
+			
+			AbstractApplicationContext context = 
+					new ClassPathXmlApplicationContext("di_xml/foodmenu.xml");
+		
+		System.out.println(menu.);
+			
+		
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package di_p;
+
+public class Coffee {
+
+		String name;
+		int price;
+		
+		
+		public Coffee(String name, int price) {
+			super();
+			this.name = name;
+			this.price = price;
+			
+		}
+
+
+		public String order_am() {
+			// TODO Auto-generated method stub
+			return "Coffee [name=" + name + ", price=" + price + "]";
+		}
+		
+
+	
+
+}

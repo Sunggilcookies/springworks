@@ -1,0 +1,16 @@
+package foodmenu;
+
+public class dinner {
+	String dmain;
+	String dside;
+	public dinner(String dmain, String dside) {
+		super();
+		this.dmain = dmain;
+		this.dside = dside;
+	}
+	@Override
+	public String toString() {
+		return "dinner [dmain=" + dmain + ", dside=" + dside + "]";
+	}
+	
+}

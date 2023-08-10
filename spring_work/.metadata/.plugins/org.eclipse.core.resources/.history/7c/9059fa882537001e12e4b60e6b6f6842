@@ -1,0 +1,15 @@
+package foodmenu;
+import foodmenu.breakfast;
+import foodmenu.lunch;
+import foodmenu.dinner;
+public class Menu {
+	
+	public breakfast order_kr() {
+		System.out.println("아침식사를 한식으로 고르셨습니다.");
+	}
+	public breakfast order_jp() {
+		System.out.println("아침식사를 한식으로 고르셨습니다.");
+	}
+	
+	
+}

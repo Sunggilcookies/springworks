@@ -1,5 +1,8 @@
 package di_p;
 
+import di_p.Handle;
+import di_p.Wheel;
+
 public class InMTB implements InterBiCycle{
 
 	String name, kind = "MTB";

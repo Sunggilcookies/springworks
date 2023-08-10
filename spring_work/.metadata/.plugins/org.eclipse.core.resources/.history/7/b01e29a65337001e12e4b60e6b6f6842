@@ -1,0 +1,56 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean class="foodmenu.Menu" name="kmenu">		
+	</bean>
+	<bean class="foodmenu.Menu" name="jmenu">
+		<lookup-method name="border" bean="jbreakfast" />
+		<lookup-method name="lorder" bean="jlunch" />
+		<lookup-method name="dorder" bean="jdinner" />
+	</bean>
+	<bean class="foodmenu.Menu" name="amenu">
+		<lookup-method name="border" bean="abreakfast" />
+		<lookup-method name="lorder" bean="alunch" />
+		<lookup-method name="dorder" bean="adinner" />
+	</bean>
+	
+	
+	<!--일식-->
+	<bean class="foodmenu.Breakfast" name="jbreakfast">
+		<constructor-arg value="샤브샤브" />
+		<constructor-arg value="1600" />
+		<constructor-arg value="우동" />
+		<constructor-arg value="200" />
+	</bean>
+	<bean class="foodmenu.Lunch" name="jlunch">
+		<constructor-arg value="야끼소바" />
+		<constructor-arg value="1800" />
+		<constructor-arg value="사케" />
+		<constructor-arg value="800" />
+	</bean>
+	<bean class="foodmenu.Dinner" name="jdinner">
+		<constructor-arg value="돈까스" />
+		<constructor-arg value="2600" />
+		<constructor-arg value="아사히" />
+		<constructor-arg value="500" />
+	</bean>
+	<!--양식-->
+	<bean class="foodmenu.Breakfast" name="abreakfast">
+		<constructor-arg value="스프" />
+		<constructor-arg value="500" />
+		<constructor-arg value="물" />
+		<constructor-arg value="100" />
+	</bean>
+	<bean class="foodmenu.Lunch" name="alunch">
+		<constructor-arg value="토스트" />
+		<constructor-arg value="900" />
+		<constructor-arg value="우유" />
+		<constructor-arg value="500" />
+	</bean>
+	<bean class="foodmenu.Dinner" name="adinner">
+		<constructor-arg value="스테이크" />
+		<constructor-arg value="1600" />
+		<constructor-arg value="와인" />
+		<constructor-arg value="500" />
+	</bean>
+</beans>

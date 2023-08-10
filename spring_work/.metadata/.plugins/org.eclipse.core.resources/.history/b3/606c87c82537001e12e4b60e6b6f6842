@@ -1,0 +1,20 @@
+package foodmenu;
+
+public class Lunch {
+	String lmain;
+	int lmcal;
+	String lside;
+	int lscal;
+	public lunch(String lmain, int lmcal, String lside, int lscal) {
+		super();
+		this.lmain = lmain;
+		this.lmcal = lmcal;
+		this.lside = lside;
+		this.lscal = lscal;
+	}
+	@Override
+	public String toString() {
+		return "lunch [lmain=" + lmain + ", lmcal=" + lmcal + ", lside=" + lside + ", lscal=" + lscal + "]";
+	}
+	
+}

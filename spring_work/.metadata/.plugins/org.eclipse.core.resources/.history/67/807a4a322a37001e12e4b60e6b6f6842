@@ -1,0 +1,23 @@
+package foodmenu;
+
+import foodmenu.*;
+
+
+public class Menu {
+	
+	public Breakfast border_kr() {
+		System.out.println("아침식사를 한식으로 고르셨습니다.");
+		return new Breakfast("쌀죽",200,"생수",0);
+	}
+	public Lunch lorder_kr() {
+		System.out.println("점심식사를 한식으로 고르셨습니다.");
+		return new Lunch("제육볶음",1500,"과일주스",200);
+	}
+	public Dinner dorder_kr() {
+		System.out.println("저녁식사를 한식으로 고르셨습니다.");
+		return new Dinner("백숙",1200,"육개장",2000);
+	}
+	
+	
+	
+}

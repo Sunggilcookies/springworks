@@ -1,0 +1,6 @@
+package foodmenu;
+
+public class lunch {
+	String lmain;
+	String lside;
+}

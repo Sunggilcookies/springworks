@@ -1,0 +1,25 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!--음식점 종류-->	
+	<bean class="foodmenu.Menu" name="kmenu">		
+	</bean>
+	<bean class="foodmenu.Menu" name="jmenu">
+		<lookup-method name="border" bean="jbreakfast" />
+		<lookup-method name="lorder" bean="jlunch" />
+		<lookup-method name="dorder" bean="jdinner" />
+	</bean>
+	<bean class="foodmenu.Menu" name="amenu">
+		<lookup-method name="border" bean="abreakfast" />
+		<lookup-method name="lorder" bean="alunch" />
+		<lookup-method name="dorder" bean="adinner" />
+	</bean>
+	<bean class="foodmenu.Menu" name="cmenu">
+		<lookup-method name="border" bean="cbreakfast" />
+		<lookup-method name="lorder" bean="clunch" />
+		<lookup-method name="dorder" bean="cdinner" />
+	</bean>
+	
+	
+	
+</beans>
