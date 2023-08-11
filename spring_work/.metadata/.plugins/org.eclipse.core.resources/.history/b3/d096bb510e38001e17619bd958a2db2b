@@ -1,0 +1,20 @@
+package anno_p.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Required_main {
+	
+
+		public static void main(String[] args) {
+			
+			AbstractMethodError context = 
+					new ClassPathXmlApplicationContext("di_xml/bicycle2.xml");
+
+			
+		context.close()
+			
+		
+
+}
+
+}

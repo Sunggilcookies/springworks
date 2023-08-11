@@ -1,0 +1,43 @@
+package anno_p;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Coffee {
+	@Autowired(required = true)
+	String name;
+	@Autowired(required = true)
+	int price;
+	CoffeeBean cb;
+	@Autowired
+	@Qualifier("mmm2")
+	Side sd;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public void setCb(CoffeeBean cb) {
+		this.cb = cb;
+	}
+	public void setSd(Side sd) {
+		this.sd = sd;
+	}
+	@Override
+	public String toString() {
+		return "Coffee [name=" + name + ", price=" + price + ", cb=" + cb + ", sd=" + sd + "]";
+	}
+	
+}
+
+class CoffeeBean{
+	String name;
+	String taste;
+	
+}
+class Side{
+	String [] sidelist;
+	
+}
+

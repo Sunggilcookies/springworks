@@ -1,0 +1,11 @@
+package anno_p.main;
+
+import org.springframework.boot.context.ContextIdApplicationContextInitializer;
+import org.springframework.context.support.AbstractApplicationContext;
+
+public class Coffee_main {
+	public static void main(String[] args) {
+		AbstractApplicationContext context= new 
+				ContextIdApplicationContextInitializer("anno_xml/coffee.xml");
+	}
+}

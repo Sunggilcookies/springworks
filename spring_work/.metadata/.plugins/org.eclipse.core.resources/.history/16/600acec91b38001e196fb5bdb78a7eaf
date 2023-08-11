@@ -1,0 +1,22 @@
+package anno_p;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Coffee {
+	@Autowired
+	String name;
+	int price;
+	CoffeeBean cb;
+	Side sd;
+}
+
+class CoffeeBean{
+	String name;
+	String taste;
+	
+}
+class Side{
+	String name;
+	int a;
+}
+

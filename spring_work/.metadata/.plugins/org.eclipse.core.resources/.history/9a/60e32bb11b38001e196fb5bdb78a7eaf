@@ -1,0 +1,19 @@
+package anno_p;
+
+public class Coffee {
+	String name;
+	int price;
+	CoffeeBean cb;
+	Side sd;
+}
+
+class CoffeeBean{
+	String name;
+	String taste;
+	
+}
+class Side{
+	String name;
+	int a;
+}
+
