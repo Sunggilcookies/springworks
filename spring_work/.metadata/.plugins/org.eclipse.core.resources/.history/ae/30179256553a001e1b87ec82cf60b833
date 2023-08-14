@@ -1,0 +1,12 @@
+package anno_p;
+
+import anno_p.com.sub1.Mouse;
+
+public class Computers {
+	
+	Mouse hp290() {
+		return null;
+		
+		
+	}
+}

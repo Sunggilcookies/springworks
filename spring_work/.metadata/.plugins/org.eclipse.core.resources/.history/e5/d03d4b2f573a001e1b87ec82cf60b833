@@ -1,0 +1,31 @@
+package anno_p.comabc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import anno_p.com.Bonche;
+import anno_p.com.sub1.Mouse;
+import jakarta.annotation.Resource;
+@Component
+public class NoteBook {
+	@Autowired
+	Bonche bc;
+	@Resource
+	Mouse mouse;
+	String name = "삼보그램";
+	public NoteBook() {
+		// TODO Auto-generated constructor stub
+	}
+	public NoteBook(Bonche bc, Mouse mouse, String name) {
+		super();
+		this.bc = bc;
+		this.mouse = mouse;
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "NoteBook [bc=" + bc + ", mouse=" + mouse + ", name=" + name + "]";
+	}
+	
+}

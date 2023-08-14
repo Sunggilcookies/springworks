@@ -1,0 +1,13 @@
+package anno_p.capy.sub1;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Water {
+	String name;
+	int 정량;
+	@Override
+	public String toString() {
+		return "Water [name=" + name + ", 정량=" + 정량 + "]";
+	}
+}

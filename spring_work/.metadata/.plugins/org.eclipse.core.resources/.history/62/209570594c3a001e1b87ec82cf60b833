@@ -1,0 +1,14 @@
+package anno_p.capy.sub1;
+
+import org.springframework.stereotype.Component;
+
+@Component("원두")
+public class Bean {
+	String name ,taste;
+
+	@Override
+	public String toString() {
+		return "Bean [name=" + name + ", taste=" + taste + "]";
+	}
+	
+}

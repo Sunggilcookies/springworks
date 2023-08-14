@@ -1,0 +1,29 @@
+package anno_p;
+
+import org.springframework.context.annotation.Bean;
+
+import anno_p.com.WorkStation;
+import anno_p.com.sub1.Mouse;
+import anno_p.comabc.NoteBook;
+
+public class Computers {
+	@Bean
+	Mouse hp920() {//마우스가 알아서붙어준거임
+		return new Mouse("HP920", "버티컬");
+	}
+	@Bean
+	NoteBook gm1() {
+		return new NoteBook();
+	}
+	
+	@Bean
+	WorkStation ws1() {
+		return new WorkStation("델1", null, null, null, hp920());
+		
+	}
+	@Bean //직접 호출이 아닌 매개변수로 넣어주기
+	WorkStation ws2(Mouse hp920) {
+		return new WorkStation("델1", null, null, null, hp920);
+		
+	}
+}

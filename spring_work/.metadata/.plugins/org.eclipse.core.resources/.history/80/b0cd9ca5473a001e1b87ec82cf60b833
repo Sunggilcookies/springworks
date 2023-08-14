@@ -1,0 +1,17 @@
+package anno_p.copy;
+
+import anno_p.capy.sub1.*;
+public class Copy {
+	String name;
+	Bean bean;
+	Water water;
+	Milk milk;
+	Price price;
+	Caramel carmel;
+	@Override
+	public String toString() {
+		return "Copy [name=" + name + ", bean=" + bean + ", water=" + water + ", milk=" + milk + ", price=" + price
+				+ ", carmel=" + carmel + "]";
+	}
+	
+}

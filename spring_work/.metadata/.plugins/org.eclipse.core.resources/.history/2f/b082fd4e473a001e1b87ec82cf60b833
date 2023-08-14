@@ -1,0 +1,6 @@
+package anno_p.copy;
+
+public class Copy {
+	String name;
+	
+}

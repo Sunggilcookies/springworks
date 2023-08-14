@@ -1,0 +1,99 @@
+package anno_p.copy;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+import anno_p.copy.sub.Beean;
+import anno_p.copy.sub.Milk;
+import anno_p.copy.sub.Water;
+
+import org.springframework.context.annotation.Bean;
+
+
+
+public class Copy {
+	
+	String name;
+	Beean bean;
+	Milk Milk;
+	Water Water;
+	
+	public Copy() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Copy(String name, Beean bean, anno_p.copy.sub.Milk milk, anno_p.copy.sub.Water water) {
+		super();
+		this.name = name;
+		this.bean = bean;
+		Milk = milk;
+		Water = water;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public Beean getBean() {
+		return bean;
+	}
+
+
+
+	public void setBean(Beean bean) {
+		this.bean = bean;
+	}
+
+
+
+	public Milk getMilk() {
+		return Milk;
+	}
+
+
+
+	public void setMilk(Milk milk) {
+		Milk = milk;
+	}
+
+
+
+	public Water getWater() {
+		return Water;
+	}
+
+
+
+	public void setWater(Water water) {
+		Water = water;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Copy [name=" + name + ", bean=" + bean + ", Milk=" + Milk + ", Water=" + Water + "]";
+	}
+	
+}
+
+
+ class Americano extends Copy{
+	 public Americano() {
+		// TODO Auto-generated constructor stub
+	}
+ }
+ 
+
+
+

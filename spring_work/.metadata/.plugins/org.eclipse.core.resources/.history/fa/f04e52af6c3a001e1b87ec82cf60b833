@@ -1,0 +1,15 @@
+package anno_p.copy;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import anno_p.copy.sub.Beean;
+@Configuration
+public class Cafe {
+	@Bean
+	Copy Americano() {
+		return new Copy(null, null, null, null, 0)
+		
+		
+	}
+}

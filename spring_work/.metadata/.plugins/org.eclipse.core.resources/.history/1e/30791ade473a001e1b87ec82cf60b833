@@ -1,0 +1,13 @@
+package anno_p.capy.sub1;
+
+public class Price {
+	int price;
+
+	@Override
+	public String toString() {
+		return "Price [price=" + price + "]";
+	}
+	
+	
+	
+}

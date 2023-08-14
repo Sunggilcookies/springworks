@@ -1,0 +1,8 @@
+package anno_p.capy.sub1;
+
+public class Price {
+	int price;
+	
+	
+	
+}

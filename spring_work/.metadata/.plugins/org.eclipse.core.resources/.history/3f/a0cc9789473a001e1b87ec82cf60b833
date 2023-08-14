@@ -1,0 +1,7 @@
+package anno_p.copy;
+
+import anno_p.capy.sub1.*;
+public class Copy {
+	String name;
+	
+}

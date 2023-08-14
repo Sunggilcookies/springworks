@@ -1,0 +1,6 @@
+package anno_p.copy.sub;
+
+public class Milk {
+	String name, type;
+	
+}

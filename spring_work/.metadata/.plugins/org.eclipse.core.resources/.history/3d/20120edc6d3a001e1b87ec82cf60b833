@@ -1,0 +1,16 @@
+package anno_p.copy.sub;
+
+public class Water {
+	String name;
+
+	public Water(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Water [name=" + name + "]";
+	}
+	
+}

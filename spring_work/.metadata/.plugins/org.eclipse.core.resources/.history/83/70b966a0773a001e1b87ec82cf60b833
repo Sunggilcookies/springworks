@@ -1,0 +1,17 @@
+package anno_p;
+
+public class AnnoConfig {
+	
+	BiHandle hd1() {
+		return new BiHandle("일자핸들", "산악용");
+	}
+	
+	BiWheel wh1() {
+		
+	}
+	
+	@Bean
+	Bicycle mtb() {
+		
+	}
+}

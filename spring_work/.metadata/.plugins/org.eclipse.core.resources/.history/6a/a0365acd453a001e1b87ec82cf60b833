@@ -1,0 +1,9 @@
+package anno_p.main;
+
+import hambuger.main.main;
+
+public class Capy {
+	public static void main(String[] args) {
+		
+	}
+}

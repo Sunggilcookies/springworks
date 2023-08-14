@@ -1,0 +1,10 @@
+package anno_p.com;
+
+public class DeskTop {
+	Bonche bc;
+	
+	Mouse mouse;
+	
+	Monitor monitor;
+	String name = "오마이피시"
+}

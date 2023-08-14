@@ -1,0 +1,20 @@
+package anno_p.copy;
+
+public class Copy {
+	String name;
+	bean bean
+}
+
+class Americano extends Copy{
+	
+}
+
+class Cafelatte extends Copy{
+	
+}
+
+class Caramel extends Copy{
+	
+}
+
+

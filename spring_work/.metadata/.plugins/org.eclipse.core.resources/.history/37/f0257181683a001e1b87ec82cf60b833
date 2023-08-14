@@ -1,0 +1,6 @@
+package anno_p.copy.sub;
+
+public class Bean {
+	String name;
+	int spoon;
+}

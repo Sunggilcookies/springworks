@@ -1,0 +1,19 @@
+package anno_p.copy;
+
+public class Copy {
+
+}
+
+class Americano extends Copy{
+	
+}
+
+class Cafelatte extends Copy{
+	
+}
+
+class Caramel extends Copy{
+	
+}
+
+
