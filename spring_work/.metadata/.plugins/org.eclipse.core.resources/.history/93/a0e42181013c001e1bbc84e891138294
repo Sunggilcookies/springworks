@@ -1,0 +1,10 @@
+package aop_p.adv;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class ExecAdvice1 {
+	void resString(JoinPoint joinPoint) {
+		
+	}
+}

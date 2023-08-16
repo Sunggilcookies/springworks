@@ -1,5 +1,0 @@
-package talgut;
-
-public class handdle {
-		int i=0;
-}

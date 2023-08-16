@@ -1,0 +1,18 @@
+package greentest;
+
+import java.util.Scanner;
+
+import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
+
+public class test1_main {
+	public static void main(String[] args) {
+		
+			
+		Scanner a = new Scanner(System.in);
+		int je = a.nextInt();
+		System.out.println(je*je);
+		
+		
+		
+	}
+}

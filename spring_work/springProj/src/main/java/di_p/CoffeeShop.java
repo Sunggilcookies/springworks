@@ -27,22 +27,26 @@ abstract public class CoffeeShop {
 		System.out.println("order_private 대행 실행");
 		return order_private();
 	}
+	
 	final public Coffee order_final() {
 		System.out.println("order_final 실행");
 		return new Coffee("왜그러노",2300);
 	}
+	
 	static public Coffee order_static() {
-		System.out.println("order_static  실행");
-		return new Coffee("왜이라노",1300);
-	}
-	public Coffee order_piano() {
-		System.out.println("order_static  실행");
-		return new Coffee("피아노",4000);
+		System.out.println("order_static 실행");
+		return new Coffee("와이라노",2500);
 	}
 	
+	public Coffee order_piano() {
+		System.out.println("order_piano 실행");
+		return new Coffee("피아노",4000);
+	}
+
 	abstract public Coffee order_hunter();
 	
 	abstract public Coffee order_latte();
-
+	
+	abstract public Coffee order_coke();
 }
 

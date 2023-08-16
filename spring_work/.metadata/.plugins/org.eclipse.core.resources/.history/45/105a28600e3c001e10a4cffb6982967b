@@ -1,0 +1,23 @@
+package aop_p.dohung;
+
+public class Circle {
+	double 원넓이 =0;
+	double 원둘레 =0;
+	Double PI= Math.PI;
+	
+	
+	public Double 원넓이(double r, Double PI ) {
+		원넓이 = r*r*PI;
+		return 원넓이;
+	}
+	
+	public Double 둘레의합계(double r, Double PI ) {
+		원둘레 = r*2*PI;
+		return 원둘레;
+	}
+	
+	public int papa(int c) {
+		System.out.println("조철왕:"+c);
+		return 4000;
+	}
+}

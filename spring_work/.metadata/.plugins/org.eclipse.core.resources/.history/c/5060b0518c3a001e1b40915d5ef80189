@@ -1,0 +1,22 @@
+package greentest;
+
+import java.util.Scanner;
+
+public class test1_main {
+	public static void main(String[] args) {
+		
+
+		int [] list ;
+		for(int i=0;i<=10;i++) {
+			Scanner list[i] = new Scanner(System.in);
+			
+			int i= i+1;
+			if(i<10) {
+				break;
+			}
+		}
+
+		
+		
+	}
+}

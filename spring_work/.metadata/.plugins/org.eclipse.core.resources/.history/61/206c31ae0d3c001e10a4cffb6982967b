@@ -1,0 +1,20 @@
+package aop_p.dohung;
+
+public class Circle {
+	int 넓이 =0;
+	Double PI= Math.PI;
+	public String 넓이(int r, Double PI ) {
+		
+		return 널;
+	}
+	
+	public String wife() {
+		System.out.println("애봉파워");
+		return "애봉";
+	}
+	
+	public int papa(int c) {
+		System.out.println("조철왕:"+c);
+		return 4000;
+	}
+}

@@ -9,7 +9,8 @@ public class RCCar {
 	@Resource
 	Motor mtr;
 	
-	@Resource(name="ww2") //무조건 강제임
+	//@Resource(required = false)
+	@Resource(name="ww2")
 	RCWheel rw1;
 	
 	RCWheel rw2, rw3,rw4;

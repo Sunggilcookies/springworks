@@ -1,6 +1,0 @@
-package anno_p.copy;
-
-public class Copy {
-	String name="아메리카노,카페라떼,카라멜마끼아또";
-	
-}

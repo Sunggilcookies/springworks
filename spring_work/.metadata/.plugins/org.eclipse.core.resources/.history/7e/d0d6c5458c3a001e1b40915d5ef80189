@@ -1,0 +1,29 @@
+package greentest;
+
+import java.util.Scanner;
+
+public class test1_main {
+	public static void main(String[] args) {
+		
+
+		int [] list ;
+		while(true) {
+			Scanner list = new Scanner(System.in);
+			int i= i+1;
+			if(i<10) {
+				break;
+			}
+		}
+
+		for(int zd=0;zd<=10;zd++) {
+			int zd = .nextInt();
+			int	zd = b.nextInt();
+			int zd = c.nextInt();
+		}
+	
+		System.out.println(A+B);
+		System.out.println(A*B);
+		
+		
+	}
+}

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Umbrella implements BeanNameAware, InitializingBean, DisposableBean {
+public class Umbrella implements BeanNameAware, InitializingBean, DisposableBean{
 	String name, type;
 	int price;
 	
@@ -35,22 +35,21 @@ public class Umbrella implements BeanNameAware, InitializingBean, DisposableBean
 	public String toString() {
 		return "Umbrella [name=" + name + ", type=" + type + ", price=" + price + "]";
 	}
-	//init 메소드 
-		@Override
-		public void destroy() throws Exception {
-			System.out.println("destory()실행");
-			
-		}
-		@Override
-		public void afterPropertiesSet() throws Exception {
-			System.out.println("afterPropertiesSet()실행");
-			
-		}
-		@Override
-		public void setBeanName(String name) {
-			System.out.println("setBeanName()실행");
-			
-		}
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("destroy()");
+	}
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("afterPropertiesSet()");
+	}
+	@Override
+	public void setBeanName(String name) {
+		// TODO Auto-generated method stub
+		System.out.println("setBeanName():"+name);
+	}
 	
 	
 }

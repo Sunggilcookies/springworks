@@ -3,8 +3,9 @@ package di_p.main;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import di_p.Camera;
 import di_p.HambugerSet;
-
+import di_p.HandPhone;
 
 public class Hambuger_main {
 
@@ -14,7 +15,8 @@ public class Hambuger_main {
 				new ClassPathXmlApplicationContext("di_xml/hambuger.xml");
 
 		
-	
+		HambugerSet hs1 = context.getBean("hs1",HambugerSet.class);
+		System.out.println(hs1);
 		
 	}
 

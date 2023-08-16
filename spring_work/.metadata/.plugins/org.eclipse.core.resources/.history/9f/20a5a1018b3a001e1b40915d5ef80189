@@ -1,0 +1,16 @@
+package greentest;
+
+import java.util.Scanner;
+
+public class test1_main {
+	public static void main(String[] args) {
+		
+		System.out.printf("제 이름은 홍길동입니다.\n");
+		System.out.printf("제 나이는 %d살입니다.\n",20);
+		System.out.printf("제가 사는곳의 번지수는 %d-%d 입니다.\n",123,456);
+		
+		Scanner a = new Scanner(System.in);
+		int hi = a.nextInt();
+		
+	}
+}

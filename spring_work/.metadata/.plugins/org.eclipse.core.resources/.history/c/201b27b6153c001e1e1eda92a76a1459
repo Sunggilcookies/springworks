@@ -1,0 +1,19 @@
+
+ackage aop_p.dohung;
+
+import java.util.Arrays;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class Advice_Circle {
+	Object arTest(ProceedingJoinPoint joinPoint) {
+		Object res = null;
+		
+		
+		
+		
+		
+		System.out.println(" >> arTest 완료");
+		return res;
+	}
+}

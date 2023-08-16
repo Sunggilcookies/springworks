@@ -17,29 +17,38 @@ public class Lookup_main {
 		
 		System.out.println("order_am : " + cs.order_am());
 		cs.order_void();
-		//System.out.println("order_void : " + cs.order_void()); void는 return 불가
+		//System.out.println("order_void : " + cs.order_void());void는 return 불가
+		
 		//리턴형이 다른 메소드는 lookup-method 불가
 		System.out.println("order_tea : " + cs.order_tea());
-		//System.out.println("order_private : " + cs.order_private()); private 접근 불가
+		
+		//System.out.println("order_private : " + cs.order_private()); private 접근불가
+		//private, final, static ==> lookup-method 적용되지 않고 클래스에 정의된 메소드가 호출
 		System.out.println("order_private2 : " + cs.order_private2());
-		//final은 lookup-method 이 적용되지 않음 상수라서?
+		
+		//private, final, static ==> lookup-method 적용되지 않고 클래스에 정의된 메소드가 호출
 		System.out.println("order_final : " + cs.order_final());
-		//static은 lookup-method 이 적용되지 않음 (의미 없음)
+		
+		//private, final, static ==> lookup-method 적용되지 않고 클래스에 정의된 메소드가 호출
 		System.out.println("order_static : " + cs.order_static());
+		
 		System.out.println("order_piano : " + cs.order_piano());
+		
 		//추상메소드를 lookup-method로 재정의하여 실행가능
 		System.out.println("order_hunter : " + cs.order_hunter());
-		//추상메소드를 재정의하지 않고 실행시 에러 발생
-		//System.out.println("order_hunter : " + cs.order_latte());
+		
+		//추상메소드를 재정의하지 않고 실행시 에러발생
+		//System.out.println("order_latte : " + cs.order_latte());
 		
 		/*
-		식단표 xml 아침점심저녁 xml에서 각 식단대로 메뉴를 리턴하시오
-		식사 클래스가 return 되고
-		식사 클래스에 아침 토스트 점심 제육 저녁 스파게티 xml에 지정되어있는거 나가게
-			
-		*/		
-		
-		
+		 
+		 삭단표 의 식단을 xml 에서 지정하세요
+		 
+		 식단표
+		 아침, 점심, 저녁
+		 
+		 xml에서 각 식단대로 메뉴를 리턴
+		 * */
 		
 		
 

@@ -11,8 +11,6 @@ public class WashMachine {
 	Drum dr;
 	String name;
 	
-	//setmt 뻈는데도 Autowired 랑 Qualifier("beanname")이 알아서 넣어줌 ㅇㅈ?
-	
 	@Autowired(required = false)
 	public void setDr(Drum dr) {
 		this.dr = dr;
