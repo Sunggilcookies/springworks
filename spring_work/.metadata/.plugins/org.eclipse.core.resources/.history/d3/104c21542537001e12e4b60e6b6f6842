@@ -1,7 +1,0 @@
-package foodmenu;
-import foodmenu.breakfast;
-import foodmenu.lunch;
-import foodmenu.dinner;
-public class Menu {
-	
-}

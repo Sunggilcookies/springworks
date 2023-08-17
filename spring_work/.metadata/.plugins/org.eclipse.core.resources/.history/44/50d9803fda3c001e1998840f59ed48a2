@@ -1,0 +1,24 @@
+package aop_p.hansick;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Service;
+
+@Service
+@Aspect
+public class HansickAdvice{
+	@Around(argNames = "찌개")
+	public void hansick(JoinPoint joinpoint, String 찌개, int  가격) {
+		System.out.println("hansick");
+	}
+
+	@After(value = "hansick")
+	public void jj(JoinPoint joinPoint ) {
+		System.out.println("a");
+	}
+	
+
+
+}

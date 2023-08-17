@@ -1,0 +1,17 @@
+package aop_p.hansick;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Service;
+
+@Service
+@Aspect
+public class HansickAdvice{
+	
+	
+	public void jj() {
+		System.out.println("a");
+	}
+	
+
+
+}

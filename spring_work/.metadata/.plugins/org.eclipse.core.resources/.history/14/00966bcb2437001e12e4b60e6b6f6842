@@ -1,8 +1,0 @@
-package foodmenu;
-
-public class lunch {
-	String lmain;
-	int lmcal;
-	String lside;
-	int lscal;
-}

@@ -1,0 +1,21 @@
+package aop_p.grade;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Ban {
+
+	public void 직장인반(int[] korean1, int[] english1) {
+		System.out.println("직장인반");
+	}
+	public void 일반(int[] korean2, int[] english2, int[] math2) {
+		System.out.println("일반");
+	}
+	
+	public String 예체능(int people, int korean, int english, int math, int health) {
+		System.out.println("예체능반 국어성적:"+korean+"영어성적:"+english+"건강점수:"+health);
+		return "예체능반!";
+	}
+
+	
+}

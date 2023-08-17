@@ -1,6 +1,0 @@
-package foodmenu;
-
-public class dinner {
-	String dmain;
-	String dside;
-}

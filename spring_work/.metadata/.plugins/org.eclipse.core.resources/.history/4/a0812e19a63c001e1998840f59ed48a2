@@ -1,0 +1,27 @@
+package aop_p.grade;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import aop_p.webToon.JoSuk;
+import aop_p.webToon.KangBada;
+import aop_p.webToon.KangSan;
+
+public class Grade_Main {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/grade.xml");
+		
+		Ban ban = context.getBean("ban",Ban.class);
+	
+		ban.직장인반(3,new int[]{90, 60}, new int[]{80, 80});
+		ban.일반(5,40, 80, 70);
+		ban.예체능(9,50, 40, 90,100);
+		
+		
+		
+		
+	}
+
+}

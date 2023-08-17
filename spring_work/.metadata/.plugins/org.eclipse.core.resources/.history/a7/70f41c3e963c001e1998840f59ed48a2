@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/aop
+https://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<context:component-scan base-package="aop_p.webToon"/>
+	<context:component-scan base-package="aop_p.adv"/>
+	
+	<aop:config>
+		<aop:aspect ref="execAdvice1">
+			<aop:before method="retString" 
+			pointcut="execution(public String aop_p.webToon..* (..))" />
+			
+			<aop:before method="paramInt" 
+			pointcut="execution(public * aop_p.webToon..* (int, ..))" />
+			
+			<aop:pointcut id="dog" expression="execution(public * aop_p.webToon..dog* (..))" />
+			<aop:before method="nameDog" 
+			pointcut-ref="dog" />
+			
+			<aop:pointcut id="classKang" expression="execution(public * aop_p.webToon.Kang*.* (..))" />
+			<aop:after method="claKang" 
+			pointcut-ref="classKang" />
+			
+			<aop:after method="endO" 
+			pointcut="execution(public * aop_p.webToon.*.*o (..))" />
+			
+			
+			<aop:after method="oAndKang" 
+			pointcut="execution(public * aop_p.webToon.*.*o (..)) and execution(public * aop_p.webToon.KangBada.* (..))" />
+			
+			<aop:after method="oOrJo" 
+			pointcut="execution(public * aop_p.webToon.*.*o (..)) or execution(public * aop_p.webToon.Jo*.* (..))" />
+		</aop:aspect>
+		
+		<aop:aspect ref="execAdvice2">
+			<aop:after method="ok" 
+			pointcut="execution(public * aop_p.webToon.*.*o (..)) and execution(public * aop_p.webToon.KangBada.* (..))" />
+			
+			<aop:before method="oOrJo" 
+			pointcut="execution(public * aop_p.webToon.*.*o (..)) or execution(public * aop_p.webToon.Jo*.* (..))" />
+		</aop:aspect>
+	</aop:config>
+</beans>
