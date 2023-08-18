@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="anno_p.main.Coffee_main"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.context.ContextIdApplicationContextInitializer"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
-    <fullyQualifiedTypeName name="anno_p.com.sub2.Monitor"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="anno_p.capy.sub1.Caramel"/>
-    <fullyQualifiedTypeName name="anno_p.comabc.Monitor"/>
-    <fullyQualifiedTypeName name="anno_p.com.sub1.Mouse"/>
-    <fullyQualifiedTypeName name="anno_p.com.WorkStation"/>
-    <fullyQualifiedTypeName name="anno_p.com.Bonche"/>
-    <fullyQualifiedTypeName name="anno_p.comabc.NoteBook"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Configurable"/>
-    <fullyQualifiedTypeName name="anno_p.copy.sub.Bean"/>
-    <fullyQualifiedTypeName name="anno_p.capy.sub1.Water"/>
-    <fullyQualifiedTypeName name="javax.management.remote.SubjectDelegationPermission"/>
     <fullyQualifiedTypeName name="anno_p.capy.sub1.Bean"/>
     <fullyQualifiedTypeName name="anno_p.copy.Copy"/>
     <fullyQualifiedTypeName name="anno_p.copy.sub.Beean"/>
@@ -30,7 +14,6 @@
     <fullyQualifiedTypeName name="anno_p.BiWheel"/>
     <fullyQualifiedTypeName name="anno_p.BiHandle"/>
     <fullyQualifiedTypeName name="anno_p.BiCycle"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ImportResource"/>
     <fullyQualifiedTypeName name="hambuger.main.main"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.After"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="aaa.model.Person"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="aaa.controll.RequestController"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>request/attr</h2>
+
+	
+age:[[${age}]]<br/>
+pname:[[${pname}]]<br/>
+<hr/>
+<th:block th:each="j:${jum}">
+	[[${j}]]<br/>
+	
+</th:block>
+<hr/>
+now:[[${now}]]<br/>
+per:[[${per}]]<br/>
+per:[[${per.pname}]],[[${per.mil}]]
+	
+</body>
+</html>
