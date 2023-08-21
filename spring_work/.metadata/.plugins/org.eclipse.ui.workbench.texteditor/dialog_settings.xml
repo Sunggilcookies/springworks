@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="(&quot;attrReg&quot;)"/>
 			<item value="&#x09;System.out.println(context.getBean(&quot;cf1&quot;));"/>
 			<item value="Studs"/>
 			<item value=""/>
