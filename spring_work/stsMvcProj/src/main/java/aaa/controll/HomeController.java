@@ -14,16 +14,16 @@ public class HomeController {
 		//return "homehome";
 		return "home";  // views/home.html
 		
-/*
-application.yaml 설정
-
-spring :
-  thymeleaf:
-    prefix : views/
-    suffix : .html
-    cache : false
-     
- * */		
 		
+/*		
+	application.yaml 설정
+	server :
+		  port : 80
+		spring :
+		  thymeleaf:
+		    prefix: views/
+		    suffix: .html
+		    cache: false
+*/
 	}
 }

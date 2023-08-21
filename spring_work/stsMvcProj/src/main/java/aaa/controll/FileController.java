@@ -107,19 +107,38 @@ public class FileController {
 	}
 	void fileSave2(MultipartFile mf) {
 		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
-		
-		File ff = new File(path+"\\"+mf.getOriginalFilename());
-		
-		try {
-			FileOutputStream fos = new FileOutputStream(ff);
+		if(!mf.isEmpty()){	//1.파일 확인하기
 			
-			fos.write(mf.getBytes());
+		
+			File ff = new File(path+"\\"+mf.getOriginalFilename());
 			
-			fos.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			String fn =ff.getName();	
+			String ftype =fn.substring(fn.lastIndexOf(".")+1);
+			String fname = fn.replace('.'+ftype,"");
+			int i =0;
+			while(ff.exists()) {	//1.파일 중복될때 제목에 1더하기
+				i++;
+				ff= new File(path+"\\"+fname+i+"."+ftype);
+			}
+			System.out.println(ff);
+			
+			if (ftype.equals("png") || ftype.equals("jpg")) {	//3.파일 확장자
+			
+				try {
+					FileOutputStream fos = new FileOutputStream(ff);
+					
+					fos.write(mf.getBytes());
+					
+					fos.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else {
+				System.out.println("올바른 확장자가 아닙니다.");
+			}
+		}else {
+			System.out.println("올릴 파일이 없어요");
 		}
-		
 	}
 }

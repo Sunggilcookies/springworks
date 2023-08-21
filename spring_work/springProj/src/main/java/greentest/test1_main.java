@@ -1,42 +1,33 @@
 package greentest;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 
 public class test1_main {
 	public static void main(String[] args) {
-		//40번째는 2*i=
 	
-		int[] five= new int [5];
-		int high=0;
-		int down=0;
-		int total=0;
+	
+		String [] word= new String[30];
 		
-		for(int i=0;i<five.length;i++) {
-			Scanner a= new Scanner(System.in);
-			int z=a.nextInt();
-			five[i]=z; //일단 값 집어넣고
-			total=total+five[i];
-			if(i==0) {
-				high=z;
-				down=z;
-			}
-			if(i>=1) {
-				if(high<five[i]) {
-					high=five[i];
-				}
-				if(down>five[i]) {
-						down=five[i];
-				}
+		int z =0;
+		Scanner a= new Scanner(System.in);
+		String b= a.next();
+		Scanner c= new Scanner(System.in);
+		String d= c.next();
+		for(int i=0;i<=b.length();i++) {
+				word=b.split("");
 				
+		}
+		for(int i=0;i<=word.length-1;i++) {
+			if(word[i].equals(d)){
+				z=i;
 			}
-			
-		}	
-		System.out.println(high);
-		System.out.println(down);
-		System.out.println(total);
+		}
+	
+		
+		
+		System.out.println("찾으시는 글자는"+d+"입력하신 글자의 위치는 word["+z+"]");	
+	
 		
 		
 	
