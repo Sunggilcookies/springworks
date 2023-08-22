@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf/control</title>
+</head>
+<body>
+<h1>thymeleaf/control</h1>
+<th:block th:with="a=30"> 변수생성 끼요옷!!
+	a:[[${a}]]<br/>
+	<h2>if</h2>
+	if="${a >= 20}"  :  <th:block th:if="${a >= 20}" th:text="20이상" /> <br/>
+	if="${a le 20}"  :  <th:block th:if="${a le 20}" th:text="20이하" /> <br/>
+	<h2>unless</h2>
+	unless = "${a >= 20}"  :  <th:block th:unless="${a >= 20}" th:text="20이상" /> <br/>
+	unless = "${a lt 20}"  :  <th:block th:unless="${a lt 20}" th:text="20이하" /> <br/>
+	
+	<th:block th:if="${pid != null}" >
+		[[${pid}]]등장
+	</th:block>
+	<th:block th:if="${pid == null}" >
+		없어요
+	</th:block>
+	<th:block th:if="${pname != null}" >
+		[[${pname}]]등장
+	</th:block>
+	<th:block th:unless="${pname != null}" >
+		없어요
+	</th:block>
+	
+	
+	<h2>switch</h2>
+	 <th:block th:switch="${a}" > 
+		 <th:block th:case="10" th:text="10이다" /> 
+		 <th:block th:case="20" th:text="20이다" /> 
+		 <th:block th:case="30" th:text="30이다.1" /> 
+		 <th:block th:case="30" th:text="30이다.2" /> 
+		 <th:block th:case="40" th:text="40이다" /> 
+		 <th:block th:case="50" th:text="50이다" /> 
+	 </th:block>
+	<h2>each</h2>
+	 <th:block th:each="no, stat:${arr }" > 
+		 <div th:text="|${stat} - ${no}|"/>
+	 </th:block>
+	 <br/>
+</th:block>
+</body>
+</html>
