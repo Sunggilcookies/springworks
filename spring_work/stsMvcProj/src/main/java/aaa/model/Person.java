@@ -6,8 +6,11 @@ import lombok.Data;
 
 public class Person {
 	
-	public Person() {
-		// TODO Auto-generated constructor stub
+	public Person(String id, String name, String pw) {
+		super();
+		this.id=id;
+		this.name = name;
+		this.pw = pw;
 	}
 	public Person(String pname, String gender, boolean mil) {
 		super();
@@ -15,7 +18,7 @@ public class Person {
 		this.gender = gender;
 		this.mil = mil;
 	}
-	String pname, gender, id;
+	String pname, gender, id ,pw ,name;
 	int age;
 	boolean mil, marriage;
 	

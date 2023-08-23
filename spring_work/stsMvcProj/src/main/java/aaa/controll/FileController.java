@@ -1,18 +1,25 @@
 package aaa.controll;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.net.URLEncoder;
+import java.net.http.HttpResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import aaa.model.UploadData;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/file")
@@ -87,6 +94,43 @@ public class FileController {
 		return "file/uploadReg3";
 	}
 	
+	@RequestMapping(value="download")
+	@ResponseBody
+	String filedown(HttpServletResponse response, HttpServletRequest request) {
+				
+		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
+		String fName = request.getParameter("fname");
+		//실제 배포시에는 realpath 사용
+		try {
+			FileInputStream fis = new FileInputStream(path+"\\"+fName);
+			
+			String encFName = URLEncoder.encode(fName,"utf-8");
+			System.out.println(fName+"->"+encFName);
+			response.setHeader("Content-Disposition", "attachment;filename="+encFName);
+			
+			ServletOutputStream sos = response.getOutputStream();
+			
+			byte [] buf = new byte[1024];
+			int cnt =0;
+			while(fis.available()>0) {	//읽을 내용이 남ㅇ아ㅣㅆ다면
+				int len = fis.read(buf); 	//읽어서 -> buf에 넣음
+											//len : 넣은 byte 길이
+				sos.write(buf, 0 , len); 	//보낸다 : buf 내용이 0부터 len 만큼 보낸다.
+				cnt ++;
+				System.out.println(cnt + len);
+			}
+
+			sos.close();
+			fis.close();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "파일이 다운되었습니다.";
+	}
+	
 	
 	void fileSave(MultipartFile mf) {
 		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
@@ -141,4 +185,9 @@ public class FileController {
 			System.out.println("올릴 파일이 없어요");
 		}
 	}
+	
+	
+	
+	
+	
 }

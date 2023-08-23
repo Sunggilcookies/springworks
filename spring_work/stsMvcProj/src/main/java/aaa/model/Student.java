@@ -13,6 +13,8 @@ public class Student implements Comparable<Student>{
 	double tot, avg;
 	int rank;
 	
+	
+	
 	public double getTot() {
 		tot = 0;
 		for (Double i : jum) {
@@ -43,5 +45,18 @@ public class Student implements Comparable<Student>{
 			res = name.compareTo(o.name);
 		}
 		return res;
+	}
+	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(String name, double... jum) {
+		super();
+		this.name = name;
+		this.jum = new ArrayList<>();
+		for (Double i : jum) {
+			this.jum.add(i);
+		}
 	}
 }

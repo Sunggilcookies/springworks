@@ -1,17 +1,21 @@
 package aaa.model;
 
 public class User {
-	String name, id, pw;
+	String id, name, pw;
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String name, String id, String pw) {
+	
+
+	public User(String id, String name, String pw) {
 		super();
-		this.name = name;
 		this.id = id;
+		this.name = name;
 		this.pw = pw;
 	}
+
+
 
 	public String getName() {
 		return name;

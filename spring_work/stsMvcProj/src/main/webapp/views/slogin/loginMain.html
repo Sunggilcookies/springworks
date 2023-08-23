@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>세션로그인</h2>
+
+
+<th:block th:if="${session.pid != null}" >
+<h2>[[${session.pname}]]님 환영합니다.</h2>
+<a href="logout" onclick="logout()">로그아웃</a><br/>
+<script>
+	alert("로그인성공")
+</script>
+<script>
+	function logout(){
+	alert("로그아웃")
+	}
+</script>
+</th:block>
+
+<th:block th:unless="${session.pid != null}">
+<form action="loginMain" method="post">
+<td>
+   id<input type="text" name="id" />
+   pw<input type="text" name="pw" />
+</td>
+<td><input type="submit" value="로그인"/></td>
+
+</form>
+</th:block>
+</body>
+</html>
