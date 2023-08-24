@@ -1,7 +1,10 @@
 package aaa.model;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
+@Component
 @Data
 public class MenuData {
 	String url, txt;

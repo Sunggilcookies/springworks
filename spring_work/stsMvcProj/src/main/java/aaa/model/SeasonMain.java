@@ -1,5 +1,6 @@
 package aaa.model;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 
@@ -23,6 +24,7 @@ public class SeasonMain {
 		
 	}
 	public String [] getPicture(String title) {
+		System.out.println("dd"+Arrays.toString(data.get(title)));
 		return data.get(title);
 	}
 

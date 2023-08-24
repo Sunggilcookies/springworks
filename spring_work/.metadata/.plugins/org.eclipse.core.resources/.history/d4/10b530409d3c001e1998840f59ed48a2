@@ -1,8 +1,0 @@
-ackage aop_p.grade;
-
-public class Snippet {
-	public static void main(String[] args) {
-		System.out.println(ban.직장인반(90, 80, 70));
-	}
-}
-

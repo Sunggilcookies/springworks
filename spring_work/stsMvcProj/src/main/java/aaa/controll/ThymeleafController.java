@@ -4,10 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import aaa.model.SeasonMain;
+import jakarta.annotation.Resource;
+
 
 @Controller
-@RequestMapping("thyme")
+@RequestMapping("/thyme")
 public class ThymeleafController {
+	
+	@Resource
+	SeasonMain sm; //실제작업
 	
 	@RequestMapping("control")//
 		String control(Model mm) {
@@ -16,10 +22,18 @@ public class ThymeleafController {
 		mm.addAttribute("pid","qqq");
 		return "thyme/control";
 	}
-	@RequestMapping("calc")//
-	String calc(){
+	
+	
+	
+	
+	@RequestMapping("lay")//
+	String lay(Model mm){
 		
-		return "thyme/calc";
+		mm.addAttribute("headerUrl","user");
+		mm.addAttribute("pid","aaa");
+		mm.addAttribute("arr",new int[] {77,66,33,99});
+		mm.addAttribute("age",35);
+		return "thyme/lalala";
 	}
 	
 	
