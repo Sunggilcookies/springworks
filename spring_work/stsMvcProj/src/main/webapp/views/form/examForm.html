@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>examForm</title>
+<style>
+	td>div{
+		background-color: #ff0;
+		color: #f00;
+	}
+	
+</style>
+</head>
+<body>
+<h1>examForm</h1>
+<form action="" method="post" th:object="${examData}">
+	<table border="">
+		<tr>
+			<td>이름</td>
+			<td>국어</td>
+			<td>영어</td>
+			<td>수학</td>
+		</tr>
+			<tr>
+			<td><input type="text" th:field="*{pid}"/>
+			<div th:if="${#fields.hasErrors('pid')}" th:errors="*{pid}" />
+			
+			</td>
+			<td><input type="text" th:field="*{korea}"/>
+			<div th:if="${#fields.hasErrors('korea')}" th:errors="*{korea}" />
+			
+			</td>
+			<td><input type="text" th:field="*{english}"/>
+			<div th:if="${#fields.hasErrors('english')}" th:errors="*{english}" />
+			
+			</td>
+			<td><input type="text" th:field="*{math}"/>
+			<div th:if="${#fields.hasErrors('math')}" th:errors="*{math}" />
+			
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"><input type="submit" value="입력" /></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

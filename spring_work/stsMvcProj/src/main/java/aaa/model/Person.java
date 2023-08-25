@@ -6,11 +6,8 @@ import lombok.Data;
 
 public class Person {
 	
-	public Person(String id, String name, String pw) {
-		super();
-		this.id=id;
-		this.name = name;
-		this.pw = pw;
+	public Person() {
+		// TODO Auto-generated constructor stub
 	}
 	public Person(String pname, String gender, boolean mil) {
 		super();
@@ -18,9 +15,21 @@ public class Person {
 		this.gender = gender;
 		this.mil = mil;
 	}
-	String pname, gender, id ,pw ,name;
-	int age;
+	String pname, gender, id, pw, msg;
+	int age, no;
 	boolean mil, marriage;
+	public Person(String id, String pname, String pw) {
+		super();
+		this.id = id;
+		this.pname = pname;
+		this.pw = pw;
+	}
+	
+	public boolean idPwChk(Person other) {
+	
+		
+		return id.equals(other.id) && pw.equals(other.pw);
+	}
 	
 	
 }
