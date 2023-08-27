@@ -1,0 +1,23 @@
+<table   border="" width="100%">
+				<tr align="center">
+					<td>반</td>
+					<td>이름</td>
+					<td>국어</td>
+					<td>영어</td>
+					<td>수학</td>
+					<td>총점</td>
+					<td>평균</td>
+					<td>랭킹</td>
+				</tr>
+				<tr align="center" th:each="hs: ${picList}">
+					<td>[[${ss}]]</td>
+					<td>[[${hs.name}]]</td>
+					<td>[[${hs.jum[0]}]]</td>
+					<td>[[${hs.jum[1]}]]</td>
+					<td>[[${hs.jum[2]}]]</td>
+					<td>[[${hs.tot}]]</td>
+					<td>[[${hs.avg}]]</td>
+					<td>[[${hs.rank}]]</td>
+					
+	</tr>
+</table>

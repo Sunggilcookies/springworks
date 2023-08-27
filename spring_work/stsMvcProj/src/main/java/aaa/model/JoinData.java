@@ -20,6 +20,7 @@ public class JoinData {
 	String pname ;
 	String pw1 ;
 	String pw2 ;
+	
 	@Email(message="이메일 형식 맞추렴")
 	String email;
 	/*

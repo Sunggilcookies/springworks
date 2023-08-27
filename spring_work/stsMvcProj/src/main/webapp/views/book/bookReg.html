@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>예약 완료</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 400px;
+            max-width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 16px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table th {
+            background-color: #42b983;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="title">예약 완료</h2>
+    <p class="subtitle">다음과 같이 예약이 완료되었습니다.</p>
+    <table class="table">
+        <tr>
+            <th>날짜</th>
+            <td><span th:text="${selectedDate}"></span></td>
+        </tr>
+        <tr>
+            <th>시간</th>
+            <td><span th:text="${selectedTime}"></span></td>
+        </tr>
+        <tr>
+            <th>지점 및 호실</th>
+            <td><span th:text="${selectedRoom}"></span></td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <td><span th:text="${userName}"></span></td>
+        </tr>
+        <tr>
+            <th>전화번호</th>
+            <td><span th:text="${userPhone}"></span></td>
+        </tr>
+        <tr>
+            <th>이메일</th>
+            <td><span th:text="${userEmail}"></span></td>
+        </tr>
+        <tr>
+            <th>남기실 말</th>
+            <td><span th:text="${userMessage}"></span></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

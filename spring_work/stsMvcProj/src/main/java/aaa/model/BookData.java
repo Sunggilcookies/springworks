@@ -1,52 +1,52 @@
 package aaa.model;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
 public class BookData {
+	//예약정보 넣어줌 원래는 안되지만..
+	private String dateSelect;
+	private String timeSelect;
+	private String locationSelect;
+	private String roomSelect;
+	private String pid  = "rabbitsg1234";
+	@Pattern(regexp="[가-힣]{2,6}" ,message="이름은 한글 2자리에서 6자리 이내로 입력해주세요")
+	private String pname ="유성길";
+	@Pattern(regexp="[0-9]{11,11}" ,message="전화번호는 숫자 11자리를 눌러주세요")
+	private String phone = "01066847607";
+	@NotEmpty(message = "이메일이 없어요")
+	private String email = "rabbitsg1234";
+	private String message;
+	
 
-	String pid = "asdf", pname="차은우", gender="여", email2="google.com";
-	String content = "어머니는 짜장면이 싫다고 하셨어\n어머니는 짬뽕이 좋다고 하셨어\n야야야야\n1234567890\n"
-			+"!@#$%^&*()_\n qljselkjoarj";
-	boolean mil = true;
-	
-	String [] genders = {"남","여","it인"};
-	
-	public List<MenuData> getHobbys(){
-		List<MenuData> res = new ArrayList<>();
-		
-		res.add(new MenuData("coding","코딩하기"));
-		res.add(new MenuData("study","공부하기"));
-		res.add(new MenuData("debug","디버깅"));
-		res.add(new MenuData("programming","프로그램만들기"));
-		
-		return res;
+	public BookData() {
 	}
+
+
+	public BookData(String dateSelect, String timeSelect, String locationSelect, String roomSelect, String pid,
+			String pname, String phone, String email, String message) {
+		super();
+		this.dateSelect = dateSelect;
+		this.timeSelect = timeSelect;
+		this.locationSelect = locationSelect;
+		this.roomSelect = roomSelect;
+		this.pid = pid;
+		this.pname = pname;
+		this.phone = phone;
+		this.email = email;
+		this.message = message;
+	}
+
 	
-	public List<String> getMyHobbys(){
-		List<String> res = new ArrayList<>();
-		
-		
-		res.add("study");
-		res.add("programming");
-		res.add("project");
-		
-		return res;
-	}
-	public Map<String,String> getEmails(){
-		Map<String,String> res = new LinkedHashMap<>();
-		
-		
-		res.put("나베르","naver.com");
-		res.put("구그레","google.com");
-		res.put("....","daum.com");
-		res.put("줌","zum.com");
-		
-		return res;
-	}
+	
+	
+	
+	
+	
+	
+	
 }
