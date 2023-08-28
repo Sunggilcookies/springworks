@@ -1,12 +1,15 @@
 package aaa.controll;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.net.URLEncoder;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +20,7 @@ import aaa.model.PageData;
 import aaa.model.UploadData;
 import aaa.service.BoardMapper;
 import jakarta.annotation.Resource;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -57,9 +61,10 @@ public class BoardController {
 	
 	//인서트하기전에 파일명을 가져와서 어파일에 넣어줘야함
 	@PostMapping("insert")
-	String insertReg(BoardDTO dto, PageData pd, MultipartFile mf) {
+	String insertReg(Model mm,BoardDTO dto, PageData pd, MultipartFile mf) {
 		
-	
+		fileSave2(dto.getMmff());
+		fileReg(mm, mf);
 		pd.setMsg("작성되었습니다.");
 		pd.setGoUrl("list");
 		//System.out.println(dto);
@@ -116,25 +121,68 @@ public class BoardController {
 
 		return "board/alert";
 	}
-	
-	@RequestMapping(value="insert")
-	String fileReg3(UploadData ud) {
+	//파일
+	String filedown(HttpServletResponse response, HttpServletRequest request) {
 		
+		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
+		String fName = request.getParameter("fname");
+		//실제 배포시에는 realpath 사용
+		try {
+			FileInputStream fis = new FileInputStream(path+"\\"+fName);
+			
+			String encFName = URLEncoder.encode(fName,"utf-8");
+			System.out.println(fName+"->"+encFName);
+			response.setHeader("Content-Disposition", "attachment;filename="+encFName);
+			
+			ServletOutputStream sos = response.getOutputStream();
+			
+			byte [] buf = new byte[1024];
+			int cnt =0;
+			while(fis.available()>0) {	//읽을 내용이 남ㅇ아ㅣㅆ다면
+				int len = fis.read(buf); 	//읽어서 -> buf에 넣음
+											//len : 넣은 byte 길이
+				sos.write(buf, 0 , len); 	//보낸다 : buf 내용이 0부터 len 만큼 보낸다.
+				cnt ++;
+				System.out.println(cnt + len);
+			}
+
+			sos.close();
+			fis.close();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		System.out.println("ud:"+ud);
-		
-		System.out.println("OriginalFilename():"+ud.getFf1().getOriginalFilename());
-		System.out.println("getName():"+ud.getFf1().getName());
-		System.out.println("getContentType():"+ud.getFf1().getContentType());
-		System.out.println("getSize():"+ud.getFf1().getSize());
-		System.out.println("isEmpty():"+ud.getFf1().isEmpty());
-		
-		
-		fileSave2(ud.getFf2());
-		
-		return "file/uploadReg3";
+		return "파일이 다운되었습니다.";
 	}
-	
+	void fileSave(MultipartFile mf) {
+		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
+		
+		File ff = new File(path+"\\"+mf.getOriginalFilename());
+		
+		try {
+			FileOutputStream fos = new FileOutputStream(ff);
+			
+			fos.write(mf.getBytes());
+			
+			fos.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	String fileReg(
+			Model mm,
+			MultipartFile ff1
+			) {
+		
+		
+		
+		mm.addAttribute("ff1", ff1.getOriginalFilename());
+		return "file/uploadReg";
+	}
 	void fileSave2(MultipartFile mf) {	 //mf파일 폴더에 저장 
 		String path = "C:\\green_project\\springworks\\spring_work\\stsMvcProj\\src\\main\\webapp\\up";
 		if(!mf.isEmpty()){	//1.파일 확인하기

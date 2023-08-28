@@ -26,4 +26,8 @@ public class BoardDTO {
 		return upfile;		
 				
 	}
+	public String getMmffName() {
+		return mmff.getOriginalFilename();
+	}
+	
 }
