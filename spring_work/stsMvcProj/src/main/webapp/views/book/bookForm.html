@@ -123,9 +123,9 @@
 			const dateSelect = document.getElementById("dateSelect");
 			dateSelect.innerHTML = "";
 
-			// 오늘부터 한 달 간의 날짜 옵션 생성
+			// 오늘부터 한 달 간의 날짜 객체 저장
 			const currentDate = new Date();
-			currentDate.setDate(currentDate.getDate() + 1); // 오늘 설정
+			currentDate.setDate(currentDate.getDate()); // 고르는 날짜가져오기
 
 			const endDate = new Date();
 			endDate.setMonth(currentDate.getMonth() + 1); // 한 달 뒤까지
@@ -133,12 +133,12 @@
 			if (currentDate.getDate() < 1) {
 				return;
 			}
-
+			//생성 오늘날짜부터 마지막날짜까지 
 			while (currentDate <= endDate) {
 				const dateString = currentDate.toISOString().slice(0, 10);
 				const dateText = dateString;
-				addOption(dateSelect, dateString, dateText);
-				currentDate.setDate(currentDate.getDate() + 1);
+				currentDate.setDate(currentDate.getDate() + 1); //오늘날짜 +1
+				addOption(dateSelect, dateString, dateText); //옵션 생성
 			}
 			updateTimeOptions(); // 날짜 옵션이 업데이트되면 동시에 시간 옵션도 업데이트
 		}

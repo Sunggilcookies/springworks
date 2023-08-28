@@ -5,7 +5,8 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.Data;
 
 @Data
-public class UploadData {
+public class UploadData {	//사진데이터 이름과 파일로 분류 ff1name을 불ㄹ러
+	//오면 ff1.getOriginalName() 반환
 
 	String id,ff1Name,ff2Name;
 	int age;
