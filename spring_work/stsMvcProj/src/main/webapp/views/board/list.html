@@ -7,8 +7,8 @@
 <body>
 <h1>board/list</h1>
 
-	총 게시물 수 =[[${res}]]
-	<table border="">
+	총 게시물 수 =[[${pd.total}]]
+	<table border="" width="90%">
 		<tr>
 			<td>번호</td>
 			<td>제목</td>
@@ -16,15 +16,48 @@
 			<td>등록일</td>
 			<td>조회수</td>
 		</tr>
-		<tr th:each="dto, dtoStat : ${mainData}">
-			<td th:text="${dtoStat.count}"/>
+		<tr th:each="dto : ${mainData}" >
+			<td th:text="${pd.start+dtoStat.count}"/>
 			<td >
 				<a th:href="|detail/${dto.id}|" th:text="${dto.title}"></a>
 			</td>
 			<td th:text="${dto.pname}"/>
-			<td th:text="${dto.regDate}"/>
+			<td th:text="${dto.getRegdatestr}"/>
 			<td th:text="${dto.cnt}"/>
 		</tr>
+		<!--페이지처리-->
+		<tr>
+		<td colspan="5" align="right">
+			<th:block th:if="${pd.pageStart > 1}" >
+				<a th:href="|?page=${pd.pageStart-1}|">[이전]</a>
+				
+			</th:block>
+			<th:block th:if="${pd.page> 1}" >
+				<a  th:href="|?page=${pd.page-1}|">&lt;</a>
+			</th:block>
+				<th:block th:each="p : ${#numbers.sequence(pd.pageStart, pd.pageEnd)}">
+				
+					
+					<th:block th:if="${pd.page==p}">
+								<span style="font-size: 16px; color: red;">[[${p}]]</span>
+					</th:block>
+					<th:block th:unless="${pd.page==p}">
+						
+						<a th:href="|?page=${p}|">[[${p}]]</a>
+						
+					</th:block>
+				</th:block>
+				<th:block th:if="${pd.page < pd.pageTotal}">
+					<a th:href="|?page=${pd.page+1}|">&gt;</a>
+				</th:block>
+				<th:block th:if="${pd.pageEnd < pd.pageTotal}">
+					<a th:href="|?page=${pd.pageEnd+1}|">[다음]</a>
+				</th:block>
+		</td>
+		</tr>
+		
+		
+		
 		<tr>
 			<td colspan="5" align="right">
 				<a href="insert">글쓰기</a>

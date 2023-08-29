@@ -5,8 +5,8 @@
 
 <mapper namespace="aaa.service.BoardMapper">
 
-	<select id="list" resultType="bDTO">
-		select * from board
+	<select id="list" resultType="bDTO" parameterType="int">
+		select * from board order by gid desc , seq limit #{start}, #{limit} 
 	</select>
 	<select id="totalCnt" resultType="int">
 		select count(*) from board

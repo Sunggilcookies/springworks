@@ -68,7 +68,7 @@ public class FileController {
 		
 		mm.addAttribute("id", mr.getParameter("id"));
 		mm.addAttribute("age", mr.getParameter("age"));
-		mm.addAttribute("ff1", ff1.getOriginalFilename());
+		
 		return "file/uploadReg";
 	}
 	
