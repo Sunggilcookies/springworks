@@ -16,16 +16,28 @@
 		</tr><tr>
 			<td>작성자</td><td th:text="${dto.pname}"/>
 		</tr><tr>
-		</tr><tr>
-			<td>파일</td><td th:text="${dto.getMmff}"/>
-		</tr><tr>
-		</tr><tr>
+		</tr><tr th:unless="${dto.upfile == ''}">
+			<td>파일</td>
+			
+			
+			<td>	<!-- boolean형 isImg메서드로 파일 확인후 href로 컨트롤러의 download 실행-->
+				<img th:if="${dto.img}" th:src="|/up/${dto.upfile}|"/>
+				<a th:if="${dto.img}" th:text="|${dto.upfile}다운로드|" 
+				   th:href="|/board/download/${dto.upfile}|"	/ >
+			</td>
+			
+		</tr>
+		<tr th:unless="${dto.upfile==''}">
 			<td>파일이름</td><td th:text="${dto.getUpfile}"/>
 		</tr><tr>
-			<td>등록일</td><td th:text="${dto.regDate}"/>
+			<td>등록일</td><td th:text="${dto.getRegdatestr}"/>
 		</tr><tr>
 			<td>조회수</td><td th:text="${dto.cnt}"/>
-		</tr><tr>
+		</tr>
+		<tr>
+			<td>내용</td><td th:text="${dto.content}"/>
+		</tr>
+		<tr>
 			<td colspan="2" align="right">
 				<a th:href="|/board/delete/${dto.id}|">삭제</a>
 				<a th:href="|/board/modify/${dto.id}|">수정</a>

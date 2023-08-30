@@ -9,15 +9,23 @@ import aaa.model.PagecalcData;
 
 @Mapper
 public interface BoardMapper {
-		int totalCnt();
-		List<BoardDTO> list(PagecalcData pd);
-		
-		BoardDTO detail(int id);
-		int insseerr(BoardDTO dto);
-		//반환값이 없는 업데이트기떄문에 void 사용
-		void addCount(int id);
-		
-		int delettt(BoardDTO dto);
-		int modifffy(BoardDTO dto);
-		
+List<BoardDTO> list(PagecalcData pd);
+	
+	BoardDTO detail(int id);
+	
+	int insseerr(BoardDTO dto);
+	
+	int delettt(BoardDTO dto);
+	
+	int modifffy(BoardDTO dto);
+	
+	int totalCnt();
+	
+	int maxId();
+	
+	void addCount(int id);
+	
+	int fileDelete(BoardDTO dto);
+	
+	int idPwChk(BoardDTO dto);
 }

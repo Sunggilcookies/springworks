@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function fileDelete(){
+		frm.action = "/board/fileDelete"
+		frm.submit()
+	}
+	
+</script>
 </head>
 <body>
 	<h1>board/ModifyForm</h1>
 	
-<form method="post" enctype="multipart/form-data" th:object="${dto}">
+<form name="frm" method="post" enctype="multipart/form-data" th:object="${dto}">
 	<input type="hidden" th:field="*{id}"/>
 	<table border="">
 		<tr>
@@ -24,8 +31,15 @@
 		</tr>
 		<tr>
 			<td>파일</td>
-			<td><input type="file" th:field="*{mmff}"/></td>
+			<td>
+				<th:block th:unless="${dto.upfile == ''}">
+					<input type="text" th:field="*{upfile}" readonly/>
+					<input   type="button"   th:value="|*{upfile}파일삭제|"onclick="fileDelete()">
+				</th:block>
+				<input th:if="${dto.upfile == ''}" type="file" th:field="*{mmff}"/>
+			</td>
 		</tr>
+		
 		<tr>
 			<td>내용</td>
 			<td><textarea th:field="*{content}"></textarea></td>
@@ -35,6 +49,7 @@
 			
 			<td colspan="2" align="center">
 				<input type="submit" value="수정"/></td>
+						<a href="/board/list">목록으로</a>
 		</tr>
 		
 	</table>

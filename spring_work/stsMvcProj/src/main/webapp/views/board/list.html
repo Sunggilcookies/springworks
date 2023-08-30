@@ -16,8 +16,8 @@
 			<td>등록일</td>
 			<td>조회수</td>
 		</tr>
-		<tr th:each="dto : ${mainData}" >
-			<td th:text="${pd.start+dtoStat.count}"/>
+		<tr th:each="dto: ${mainData}" >
+			<td th:text="${dto.gid}"/>
 			<td >
 				<a th:href="|detail/${dto.id}|" th:text="${dto.title}"></a>
 			</td>

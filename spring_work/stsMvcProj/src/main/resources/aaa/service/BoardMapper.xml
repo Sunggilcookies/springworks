@@ -5,37 +5,54 @@
 
 <mapper namespace="aaa.service.BoardMapper">
 
-	<select id="list" resultType="bDTO" parameterType="int">
-		select * from board order by gid desc , seq limit #{start}, #{limit} 
+	<select id="list" resultType="bDTO" parameterType="bDTO">
+		select * from board order by gid desc, seq limit #{start}, #{limit}
 	</select>
-	<select id="totalCnt" resultType="int">
+	
+	
+	<select id="totalCnt" resultType="Integer">
 		select count(*) from board
 	</select>
-
-
-
+	
+	
+	<update id="addCount" parameterType="Integer">
+		update board set cnt = cnt + 1 where id = #{id}
+	</update>
+	
 	<select id="detail" resultType="bDTO" parameterType="Integer">
-		select *
-		from board where id = #{id}
+		select * from board where id = #{id}
 	</select>
-
+	
+	<select id="maxId"  resultType="Integer">
+		select max(id) from board 
+	</select>
+	
 	<insert id="insseerr" parameterType="bDTO">
-		insert into board (title,
-		pname, pw, content, upfile, reg_date, cnt, seq, lev)
+		insert into board (title, pname, pw, content, upfile, reg_date, cnt, seq, lev, gid, id)
 		values
-		(#{title},#{pname},#{pw},#{content},#{upfile}, sysdate(),0,0,0)
+		(#{title},#{pname},#{pw},#{content},#{upfile}, sysdate(),0,0,0, #{id}, #{id})
 	</insert>
 
 	<delete id="delettt" parameterType="bDTO">
-		delete from board where id =
-		#{id} and pw = #{pw}
+		delete from board where id = #{id} and pw = #{pw}
 	</delete>
+	
+	
 	<update id="modifffy" parameterType="bDTO">
-		update board set
-		pname = #{pname}, content= #{content}, title=#{title}, upfile = #{upfile}
+		update board set 
+		pname = #{pname}, content= #{content}, title= #{title}, upfile = #{upfile}
 		where id = #{id} and pw= #{pw}
 	</update>
-	<update id="addCount" parameterType="int">
-		 update board set cnt = cnt + 1 where id = #{id}
+	
+	
+	
+	<update id="fileDelete" parameterType="bDTO">
+		update board set upfile = null where id = #{id} and pw= #{pw}
 	</update>
+	
+	<select id="idPwChk" parameterType="bDTO" resultType="Integer">
+		select count(*) from board where id = #{id} and pw= #{pw}
+	</select>
+	
+	
 </mapper>
