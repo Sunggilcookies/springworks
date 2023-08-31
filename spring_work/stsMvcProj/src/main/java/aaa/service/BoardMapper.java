@@ -15,6 +15,7 @@ List<BoardDTO> list(PagecalcData pd);
 	
 	int insseerr(BoardDTO dto);
 	
+	
 	int delettt(BoardDTO dto);
 	
 	int modifffy(BoardDTO dto);

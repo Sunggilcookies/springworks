@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import aaa.model.BoardDTO;
+import aaa.model.BoardDTOs;
 import aaa.model.PagecalcData;
 
 @Mapper
@@ -17,9 +18,13 @@ public interface MybatisMapper {
 	
 	int insseerr(BoardDTO dto);
 	
-	int delettt(BoardDTO dto);
+	int insseerrList(List list);
+	int insseerrDTOs(BoardDTOs DTOs);
 	
-	int modifffy(BoardDTO dto);
+	int delettt(int id, String pw);
+	
+	int modifffy(int id, String pw,String pname, String content, String title);
+	
 	
 	int totalCnt();
 	
